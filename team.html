@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lux Design</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div id="header" class="container">
+                <div id="title-text">
+                    <a href="landing.html">LUX DESIGN</a>
+                </div>
+                <nav>
+                    <ul id="navigation">
+                        <li class="nav-link">
+                            <a href="team.html">OUR TEAM</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link">
+                            <a href="shop.html">SHOP</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li id="cart" class="nav-link">
+                            <a  href="cart.html">
+                                <span>CART</span>
+                                <div class="underline"></div>
+                            </a>
+                            <span class="item_counter-target"><span class="item_counter"></span></span>                                                        
+                        </li>
+                </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="first-separator" class="container separator">
+            <hr>
+        </div>
+        <main>
+            <section class="container">
+                <h3>Our talents</h3>
+                <div id="profil-grid">
+                    <figure class="profil-frame">
+                        <div class="profil-img-frame">
+                            <img src="" class="profil-img" alt="Photo de profil">
+                        </div>
+                        <figcaption class="profil-details">
+                            <h4 class="profil-name">Jean Michel</h4>
+                            <h5 class="profil-title">Comptable</h5>
+                            <p class="profil-text">Jean Mich' de la compta</p>
+                            <div class="profil-buttons">
+                                <button class="secondary-button profil-delete-button">Delete</button>
+                                <button class="secondary-button profil-update-button">Update</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="profil-frame">
+                        <div class="profil-img-frame">
+                            <img src="" class="profil-img" alt="Photo de profil">
+                        </div>
+                        <figcaption class="profil-details">
+                            <h4 class="profil-name"></h4>
+                            <h5 class="profil-title"></h5>
+                            <p class="profil-text"></p>
+                            <div class="profil-buttons">
+                                <button class="secondary-button profil-delete-button">Delete</button>
+                                <button class="secondary-button profil-update-button">Update</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="profil-frame">
+                        <div class="profil-img-frame">
+                            <img src="" class="profil-img" alt="Photo de profil">
+                        </div>
+                        <figcaption class="profil-details">
+                            <h4 class="profil-name"></h4>
+                            <h5 class="profil-title"></h5>
+                            <p class="profil-text"></p>
+                            <div class="profil-buttons">
+                                <button class="secondary-button profil-delete-button">Delete</button>
+                                <button class="secondary-button profil-update-button">Update</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <figure id="profil-form-frame">
+                    <div class="profil-form-img-frame"></div>
+                    <figcaption class="profil-details">
+                        <input id="avatar-input" class="profil-form-input" type="file" id="photo" accept="image/*">
+                        <input id="name-input" class="profil-form-input" type="text" id="name" placeholder="Nom">
+                        <input id="job-input" class="profil-form-input" type="text" id="job" placeholder="Métier">
+                        <textarea id="bio-input" class="profil-form-input" id="bio" placeholder="Courte présentation"></textarea>
+                        <div class="profil-buttons">
+                            <button id="profil-save-button" class="secondary-button">Save</button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure id="profil-form-frame-update">
+                    <div class="profil-form-img-frame"></div>
+                    <figcaption class="profil-details">
+                        <input id="avatar-input-update" class="profil-form-input" type="file" id="photo" accept="image/*">
+                        <input id="name-input-update" class="profil-form-input" type="text" id="name" placeholder="Nom">
+                        <input id="job-input-update" class="profil-form-input" type="text" id="job" placeholder="Métier">
+                        <textarea id="bio-input-update" class="profil-form-input" id="bio" placeholder="Courte présentation"></textarea>
+                        <div class="profil-buttons">
+                            <button id="profil-save-button-update" class="secondary-button">Save</button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <button class="main-button" id="profil-add-button">Add Profile</button>
+            </section>
+        </main>
+        <div class="cart-preview"></div>
+        <div class="container separator">
+            <hr>
+        </div>
+        <footer>
+            <div id="footer" class="container">
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <script src="script-team.js"></script>
+    </body>
+</html>
