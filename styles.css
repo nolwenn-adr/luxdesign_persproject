@@ -630,6 +630,10 @@ figcaption{
 }
 
 
+@media screen and (min-width: 300px)and (max-width: 600px) {
+    
+}
+
 /**
  * ----------------------------------------
  * animation scale-up-hor-left
