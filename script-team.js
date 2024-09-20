@@ -133,44 +133,18 @@ function selectProfile(index) {
     document.getElementById('name-input-update').value = profile.name;
     document.getElementById('job-input-update').value = profile.jobtitle;
     document.getElementById('bio-input-update').value = profile.bio;
-    document.getElementById('avatar-input-update').value = '';
+    document.getElementById('avatar-input-update').value = "";
     selectedProfileIndex = index;
-    updateProfile();
+    formUpdateProfil.style.display = "";
 }
 
-function updateProfile() {
-    console.log("caca");
-    formUpdateProfil.style.display = ""
-    if (selectedProfileIndex > -1) {
-        const name = document.getElementById('name-input').value;
-        const job = document.getElementById('job-input').value;
-        const bio = document.getElementById('bio-input').value;
-        const photoInput = document.getElementById('avatar-input');
-        const photoFile = photoInput.files[0];
-
-        if (name && job && bio) {
-            if (photoFile) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const photo = e.target.result;
-                    profiles[selectedProfileIndex] = { name, jobtitle: job, bio, avatar: photo };
-                    displayProfiles();
-                    clearInputs();
-                    selectedProfileIndex = -1;
-                };
-                reader.readAsDataURL(photoFile);
-            } else {
-                profiles[selectedProfileIndex] = { ...profiles[selectedProfileIndex], name, jobtitle: job, bio };
-                displayProfiles();
-                clearInputs();
-                selectedProfileIndex = -1;
-            }
-        } else {
-            alert('Veuillez remplir tous les champs.');
-        }
-    } else {
-        alert('Veuillez sélectionner un profil à modifier.');
-    }
+function updateProfile(i) {
+    const profile = profiles[i];
+    profile.name = document.getElementById('name-input-update').value;
+    profile.jobtitle = document.getElementById('job-input-update').value;
+    profile.bio = document.getElementById('bio-input-update').value;
+    formUpdateProfil.style.display = "none"
+    displayProfiles()
 }
 
 function clearInputs() {
@@ -192,5 +166,9 @@ saveButton.addEventListener("click", () => {
     formNewProfile.style.display = "none";
     newProfile = false;
 });
+
+saveUpdatesButton.addEventListener("click", () => {
+    updateProfile(selectedProfileIndex)
+})
 
 displayProfiles();
